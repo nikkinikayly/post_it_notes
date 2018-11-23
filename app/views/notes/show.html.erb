@@ -3,3 +3,13 @@
 <%= @notes.title %>
 <%= @notes.body %>
 <%= link_to 'Back', notes_path %>
+
+<%= form_for @notes do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  
+    <%= f.submit %>
+  <% end %>
